@@ -9,8 +9,8 @@
 <p>
     <img width="90%" alt="pipeline", src="./assets/text2vdm.jpg">
 </p>
-
 </h4>
+
 ##  Abstract
 
 Professional 3D asset creation often requires diverse sculpting brushes to add surface details and geometric structures. Despite recent progress in 3D generation, producing reusable sculpting brushes compatible with artists' workflows remains an open and challenging problem. These sculpting brushes are typically represented as vector displacement maps (VDMs), which existing models cannot easily generate compared to natural images. This paper presents Text2VDM, a novel framework for text-to-VDM brush generation through the deformation of a dense planar mesh guided by score distillation sampling (SDS). The original SDS loss is designed for generating full objects and struggles with generating desirable sub-object structures from scratch in brush generation. We refer to this issue as semantic coupling, which we address by introducing weighted blending of prompt tokens to SDS, resulting in a more accurate target distribution and semantic guidance. Experiments demonstrate that Text2VDM can generate diverse, high-quality VDM brushes for sculpting surface details and geometric structures. Our generated brushes can be seamlessly integrated into mainstream modeling software, enabling various applications such as mesh stylization and real-time interactive modeling.
@@ -25,7 +25,7 @@ Professional 3D asset creation often requires diverse sculpting brushes to add s
 
 
 ## Acknowledgement
-We would like to thank the authors of [Large Steps in Inverse Rendering of Geometry](https://github.com/rgl-epfl/large-steps-pytorch), [Paint-it](https://github.com/kaist-ami/Paint-it) for their great work and generously providing source codes, which inspired our work and helped us a lot in the implementation. 
+We would like to thank the authors of [Large Steps in Inverse Rendering of Geometry](https://github.com/rgl-epfl/large-steps-pytorch), and [Paint-it](https://github.com/kaist-ami/Paint-it) for their great work and generously providing source codes, which inspired our work and helped us a lot in the implementation. 
 
 
 ## Citation
