@@ -26,7 +26,7 @@ This code was developed on Ubuntu 22.04 with Python 3.9, CUDA 11.8 and PyTorch 2
 
 ### Environment setup
 
-```
+```python
 conda create -n text2vdm python=3.9
 conda activate text2vdm
 
@@ -36,6 +36,32 @@ pip install -r requirements.txt
 # install PyTorch3D: 
 pip install 'git+https://github.com/facebookresearch/pytorch3d.git@stable'
 ```
+
+### Generate VDM brushes from text
+
+```python
+# Generate VDM brush from text
+sh run.sh
+```
+
+### Control the generation
+
+```python
+# Control with initial shape
+	use_shape_map = True # set this flag with True
+    mask_strength = 1
+    shape_strength = 0.8 # the strength of displacement of vertices for shape map
+	path = 'horn'  # change the path in gen_inverse.py
+    base_mask = cv2.imread('./shape_map/'+ path + '_mask.png')
+    shape_map = cv2.imread('./shape_map/'+ path + '.png')
+
+# Control only with mask
+	use_shape_map = False # set this flag with False
+    mask_strength = 0.5 # you can change the rate form 0 to 1
+    base_mask = cv2.imread('./masks/'+ 'your_mask.png')
+```
+
+
 
 ## Acknowledgement
 
