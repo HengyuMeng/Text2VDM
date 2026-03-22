@@ -18,13 +18,27 @@ Professional 3D asset creation often requires diverse sculpting brushes to add s
 
 ## News
 - **2025-06-26**: Text2VDM is accepted by ICCV 2025! 
+- **Code released!**
 
+## Getting started
 
-## TODO
-- [ ] Release code. Stay tuned!
+This code was developed on Ubuntu 22.04 with Python 3.9, CUDA 11.8 and PyTorch 2.1.0, using NVIDIA RTX 4090 (24GB) GPU. Later versions should work, but have not been tested.
 
+### Environment setup
+
+```
+conda create -n text2vdm python=3.9
+conda activate text2vdm
+
+# install required packages
+pip install -r requirements.txt
+
+# install PyTorch3D: 
+pip install 'git+https://github.com/facebookresearch/pytorch3d.git@stable'
+```
 
 ## Acknowledgement
+
 We would like to thank the authors of [Large Steps in Inverse Rendering of Geometry](https://github.com/rgl-epfl/large-steps-pytorch), and [Paint-it](https://github.com/kaist-ami/Paint-it) for their great work and generously providing source codes, which inspired our work and helped us a lot in the implementation. 
 
 
